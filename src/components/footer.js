@@ -12,6 +12,7 @@ const Footer = () => {
             <a
                 href="https://github.com/Yoeriwalstra"
                 target="_blank"
+                rel="noopener noreferrer"
                 style={{ color: `white` }}
             >
                 me
@@ -21,6 +22,7 @@ const Footer = () => {
             <a
                 href="https://www.gatsbyjs.org"
                 target="_blank"
+                rel="noopener noreferrer"
                 style={{ color: `white` }}
             >
                 Gatsby
