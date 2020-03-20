@@ -1,3 +1,74 @@
-h1 {
-    margin-bottom: 0;
+@import 'reset';
+@import 'layout';
+@import 'variables';
+@import 'functions';
+
+body {
+    background-color: $background-color-body;
+    color: $text-color-primary;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $header-color-primary;
+        text-shadow: -2px -2px 2px $header-color-shadow;
+    }
+
+    a {
+        color: $link-color;
+        text-decoration: none;
+
+        &:hover,
+        &:active {
+            color: lighten($link-color, 10%);
+            text-decoration-line: underline;
+            text-decoration-color: #000;
+            text-decoration-thickness: rem-calc(4);
+            text-underline-offset: 2px;
+        }
+    }
+
+    header {
+        height: rem-calc(500);
+        display: flex;
+        align-items: flex-end;
+        //background-color: $background-color-header;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: rem-calc(24);
+
+        .container {
+            width: 100%;
+            background-color: $background-color-header;
+            .content {
+                position: relative;
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                max-width: rem-calc(960);
+                padding: rem-calc(48 18 24 18);
+                margin: 0 auto;
+
+                .header-image {
+                    position: absolute;
+                    top: -150px;
+                    width: rem-calc(200);
+                    height: rem-calc(200);
+                    background-image: url('../images/me.jpg');
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 50%;
+                    border: 10px solid $background-color-header;
+
+                    @media only screen and (min-width: 480px) {
+                        top: -170px;
+                    }
+                }
+
+                nav {
+                    width: 100%;
+                    max-width: rem-calc(300);
+                }
+            }
+        }
+    }
 }
